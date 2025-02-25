@@ -11,15 +11,15 @@ import "../styles/Experience.css"
 import { TimelineElements } from "../helpers/TimelineElements";
 
 const Experience = () => {
-  let workIconStyles = {background: "brown", color: "#FFF"};
-  let schoolIconStyles = {background: "blue", color: "#FFF"};
+  let workIconStyles = {background: "gray", color: "#000"};
+  let schoolIconStyles = {background: "gray", color: "#000"};
 
   return (
     <div className="experience">
       <h1 className="timeline-title">Experience</h1>
       <p className="timeline-quote" >"Your life does not get better by chance; it gets better by change"</p>
       {/* <p className="timeline-quote-author">- Jim Rohn</p> */}
-      <VerticalTimeline>
+      <VerticalTimeline lineColor="black">
         {
           TimelineElements.map(element => {
             let isWorkIcon = element.icon === "work";
@@ -37,7 +37,7 @@ const Experience = () => {
                 <p id="description">{element.description}</p>
               </VerticalTimelineElement>
             )
-          })};
+          })}
       </VerticalTimeline>
 
 
