@@ -18,7 +18,6 @@ const Experience = () => {
     <div className="experience">
       <h1 className="timeline-title">Experience</h1>
       <p className="timeline-quote" >"Your life does not get better by chance; it gets better by change"</p>
-      {/* <p className="timeline-quote-author">- Jim Rohn</p> */}
       <VerticalTimeline lineColor="black">
         {
           TimelineElements.map(element => {

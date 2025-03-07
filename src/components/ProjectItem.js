@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-const ProjectItem = ({ image, name, id }) => {
+const ProjectItem = ({ id, image, name, tags, description }) => {
   const naviagte = useNavigate();
   return (
     <div
@@ -10,8 +10,17 @@ const ProjectItem = ({ image, name, id }) => {
         naviagte("/projects/" + id);
       }}
     >
-      <div style={{ backgroundImage: `url(${image})` }} className="bgImage" />
-      <h1> {name} </h1>
+      <div className="card">
+        <img className="project-image" src={image} alt={name}/>
+        <div className="content">
+          <h1 className="project-title-inhover">{name}</h1>
+          <p className="project-description">{description}</p>
+        </div>
+      </div>
+      <div className="project-caption">
+        <h1 className="project-name"> {name} </h1>
+        <p className="project-tags">{tags}</p>
+      </div>
     </div>
   );
 };

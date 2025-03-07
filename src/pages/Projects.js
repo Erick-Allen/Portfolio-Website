@@ -7,10 +7,16 @@ import "../styles/Project.css";
 const Projects = () => {
   return (
     <div className="projects">
-      <h1> My Personal Projects</h1>
+      <h1 className="Title">Projects</h1>
       <div className="projectList">
         {ProjectList.map((project, idx) => {
-          return <ProjectItem id={idx} name={project.name} image={project.image} />;
+          return <ProjectItem 
+          id={idx} 
+          name={project.name} 
+          image={project.image}
+          tags={project.tags}
+          description={project.description}
+           />;
         })}
       </div>
     </div>

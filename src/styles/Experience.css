@@ -1,27 +1,19 @@
-/* .experience {
-    background-color: #000000;
-    background-image: linear-gradient(180deg, #000000 0%, #062083 50%, #642b70 100%);
-} */
-
+.experience {
+    background-color: rgb(221, 219, 219);
+}
 .timeline-title {
+    padding-top: 20px;
     color: #000000;
-    font-size: 40px;
+    font-size: 36px;
     text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 12px;
 }
 
 .timeline-quote {
     color: #000000;
-    font-size: 16px;
+    font-size: 18px;
     text-align: center;
-    margin-bottom: 2px;
-}
-
-.timeline-quote-author {
-    color: #000000;
-    font-size: 14px;
-    text-align: center;
-    padding-top: 0px;
-    margin-top: 0px;
 }
 
 .date {

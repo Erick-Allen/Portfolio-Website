@@ -9,10 +9,16 @@ const Navbar = () => {
   const [expandNavbar, setExpandNavbar] = useState(false);
 
   const location = useLocation();
+  const navbarHeight = 100;
 
-  useEffect(() => {
-    setExpandNavbar(false)
-  }, [location])
+  const scrollToSection = (id) => {
+    const section = document.getElementById(id);
+    if (section) {
+      const offsetPosition = section.offsetTop - navbarHeight;
+      window.scrollTo({ top: offsetPosition, behavior: "smooth"});
+    }
+    setExpandNavbar(false);
+  }
 
   const clickHandler = () => {
     setExpandNavbar(prev => !prev);
@@ -26,11 +32,12 @@ const Navbar = () => {
         </button>
       </div>
       <div className="links">
-        <Link to ='/'> Home </Link>
-        <Link to ='/About'> About</Link>
-        <Link to ="/Projects"> Projects </Link>
-        <Link to ="/Experience"> Experience </Link>
-      </div>
+        <button onClick={() => scrollToSection("home")}>Home</button>
+        <button onClick={() => scrollToSection("about")}>About</button>
+        <button onClick={() => scrollToSection("projects")}>Projects</button>
+        <button onClick={() => scrollToSection("experience")}>Experience</button>
+        </div>
+      
     </div>
   )
 }

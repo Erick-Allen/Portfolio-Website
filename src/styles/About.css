@@ -1,0 +1,30 @@
+#about {
+    background-color: rgb(221, 219, 219);
+    /* padding-top: 5px; */
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.title {
+    color: #000000;
+    font-size: 36px;
+    text-align: center;
+    text-decoration: underline;
+    text-underline-offset: 12px;
+}
+
+.sub-title {
+    color: rgb(34, 32, 32);
+}
+
+.about-card {
+    box-shadow:  1px 1px 0 rgba(0,0,0,.06),0 2px 5px 0 rgba(0,0,0,.2);
+    font-size: 18px;
+    background-color: #fff;
+    max-width: 800px;
+    text-align: left;
+    padding: 15px;
+}

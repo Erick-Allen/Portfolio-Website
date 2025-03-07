@@ -4,11 +4,15 @@ import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import "../styles/Home.css";
+import About from "./About";
+import Projects from "./Projects";
+import Experience from "./Experience";
+import Footer from "../components/Footer";
 
 const Home = () => {
   return (
     <div className="home">
-      <div className="about">
+      <section id="home">
         <h2> Erick Allen</h2>
         <div className="prompt">
           <p>Computer science student at Lehman College</p>
@@ -22,7 +26,21 @@ const Home = () => {
             <GitHubIcon />
           </a>
         </div>
-      </div>
+      </section>
+
+      <section id="about">
+        <About/>
+      </section>
+
+      <section id="projects">
+      <Projects/>
+      </section>
+
+      <section id="experience">
+      <Experience />
+      </section>
+      
+      <Footer/>
     </div>
   );
 };
