@@ -1,4 +1,3 @@
-import React from 'react'
 import { useParams, useNavigate } from "react-router-dom";
 import { ProjectList } from '../helpers/ProjectList';
 import GitHubIcon from '@mui/icons-material/GitHub';
@@ -13,15 +12,17 @@ const ProjectDisplay = () => {
 
   return (
     <div className="project">
-      <button onClick={() => navigate(-1)} className="back-button">
-        <ArrowBackIcon /> Back
-      </button>
         <h1>{project.name}</h1>
-        <a href={project.url} className='img-url'>
-        <img src={project.image} alt="One of my projects" />
-        </a>
+        <div className="media-row">
+          <button onClick={() => navigate(-1)} className="back-button">
+            <ArrowBackIcon />
+          </button>
+          <a href={project.url} className="img-url">
+            <img src={project.demo || project.image} alt="One of my projects" />
+          </a>
+        </div>
         <p >
-            <b className="languages">Languages: {project.tags}</b>
+            <b className="stack">Stack: {project.tags}</b>
         </p>
         <a href={project.github} id='anchor'>
         <GitHubIcon className="icon" />

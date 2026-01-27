@@ -1,24 +1,64 @@
 .project {
-  display: flex;
-  text-align: center;
-  justify-content: center;
-  flex-direction: column;
-  margin-top: 200px;
+  max-height: 500px;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+  justify-items: center;
+  align-items: center;
+  padding: 24px 16px;
   align-items: center;
 }
 
 .img-url {
   width: fit-content;
   margin: 0 auto;
+  justify-self: center;
 }
 
 img {
   width: 450px;
-  height: 600px;
+  height: 400px;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    filter 0.25s ease;
+
 }
 
-.languages {
-  font-size: 30px;
+.img-url:hover img {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.18);
+  filter: brightness(1.03);
+}
+
+.back-button {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  justify-self: center;
+  border: 1px solid #ccc;
+  cursor: pointer;
+  transition:
+    background-color 0.2s ease,
+    box-shadow 0.2s ease,
+    transform 0.15s ease;
+
+}
+
+.back-button:hover {
+  background-color: #f4f4f4;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  transform: translateY(-1px);
+}
+
+.media-row {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  align-items: center;
+  width: 100%;
+}
+
+.stack {
+  font-size: 24px;
 }
 
 .icon {
@@ -26,18 +66,12 @@ img {
   color: black;
   justify-content: center;
   align-items: center;
+  transition: color 0.25s ease;
+
 }
 
-.back-button {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 5px;
-  font-size: 16px;
-  padding: 10px;
-  margin-bottom: 20px;
-  width: 450px;
-  
+.icon:hover {
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.25));
 }
 
 #anchor {

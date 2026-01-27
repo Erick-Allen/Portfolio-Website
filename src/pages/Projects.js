@@ -1,4 +1,3 @@
-import React from 'react'
 import ProjectItem from "../components/ProjectItem";
 import { ProjectList } from "../helpers/ProjectList";
 
@@ -11,6 +10,7 @@ const Projects = () => {
       <div className="projectList">
         {ProjectList.map((project, idx) => {
           return <ProjectItem 
+          key={project.id}
           id={idx} 
           name={project.name} 
           image={project.image}

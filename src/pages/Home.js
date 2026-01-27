@@ -1,12 +1,9 @@
-import React from "react";
-
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
 import EmailIcon from "@mui/icons-material/Email";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import "../styles/Home.css";
 import About from "./About";
 import Projects from "./Projects";
-import Experience from "./Experience";
 import Footer from "../components/Footer";
 
 const Home = () => {
@@ -33,11 +30,10 @@ const Home = () => {
       </section>
 
       <section id="projects">
-      <Projects/>
+       <Projects/>
       </section>
 
-      <section id="experience">
-      <Experience />
+      <section id="contact">
       </section>
       
       <Footer/>

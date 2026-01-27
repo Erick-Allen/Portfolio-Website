@@ -1,6 +1,6 @@
-import {React, useEffect, useState} from 'react';
+import {useState} from 'react';
 
-import { Link, useLocation } from "react-router-dom";
+import {useLocation } from "react-router-dom";
 import "../styles/Navbar.css"
 import ReorderIcon from '@mui/icons-material/Reorder';
 import ClearIcon from '@mui/icons-material/Clear';
@@ -35,7 +35,7 @@ const Navbar = () => {
         <button onClick={() => scrollToSection("home")}>Home</button>
         <button onClick={() => scrollToSection("about")}>About</button>
         <button onClick={() => scrollToSection("projects")}>Projects</button>
-        <button onClick={() => scrollToSection("experience")}>Experience</button>
+        {/* <button onClick={() => scrollToSection("contact")}>Contact Me</button> */}
         </div>
       
     </div>
