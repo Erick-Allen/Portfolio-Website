@@ -27,6 +27,10 @@ const ProjectDisplay = () => {
       );
     }
 
+    const displayImage = (
+      <img className="project-detail-image" src={project.demo || project.image} alt={project.alt} />
+    );
+
   return (
     <main className="project">
         <div className="project-header">
@@ -42,9 +46,15 @@ const ProjectDisplay = () => {
         </div>
 
         <section className="project-detail-card">
-          <a href={project.url} className="img-url" target="_blank" rel="noreferrer">
-            <img className="project-detail-image" src={project.demo || project.image} alt={project.alt} />
-          </a>
+          {project.url ? (
+            <a href={project.url} className="img-url" target="_blank" rel="noreferrer">
+              {displayImage}
+            </a>
+          ) : (
+            <div className="img-url">
+              {displayImage}
+            </div>
+          )}
 
           <div className="project-info">
             <div className="project-section">
@@ -76,14 +86,27 @@ const ProjectDisplay = () => {
           </div>
 
           <div className="project-actions">
-            <a href={project.github} className="project-link" target="_blank" rel="noreferrer">
-              <GitHubIcon />
-              <span>GitHub</span>
-            </a>
-            <a href={project.url} className="project-link" target="_blank" rel="noreferrer">
-              <LaunchIcon />
-              <span>Open Project</span>
-            </a>
+            {project.github && (
+              <a href={project.github} className="project-link" target="_blank" rel="noreferrer">
+                <GitHubIcon />
+                <span>GitHub</span>
+              </a>
+            )}
+            {project.url && (
+              <a href={project.url} className="project-link" target="_blank" rel="noreferrer">
+                <LaunchIcon />
+                <span>Open Project</span>
+              </a>
+            )}
+            {project.articleUrl && (
+              <a href={project.articleUrl} className="project-link" target="_blank" rel="noreferrer">
+                <LaunchIcon />
+                <span>Read Article</span>
+              </a>
+            )}
+            {!project.github && !project.url && !project.articleUrl && (
+              <span className="project-link-note">Links coming soon</span>
+            )}
           </div>
         </section>
     </main>

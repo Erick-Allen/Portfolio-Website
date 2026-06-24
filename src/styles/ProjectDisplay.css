@@ -222,6 +222,13 @@
   transform: translateY(-1px);
 }
 
+.project-link-note {
+  color: #555;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 10px 0;
+}
+
 @media only screen and (max-width: 800px) {
   .project {
     align-content: start;
