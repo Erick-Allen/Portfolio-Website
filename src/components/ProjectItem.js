@@ -1,24 +1,45 @@
+import ArrowForwardIcon from "@mui/icons-material/ArrowForward";
 import { useNavigate } from "react-router-dom";
 
-const ProjectItem = ({ id, image, name, tags, description }) => {
-  const naviagte = useNavigate();
+const ProjectItem = ({ id, image, name, description, tech }) => {
+  const navigate = useNavigate();
+
+  const openProject = () => {
+    navigate("/projects/" + id);
+  };
+
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter" || event.key === " ") {
+      event.preventDefault();
+      openProject();
+    }
+  };
+
   return (
     <div
       className="projectItem"
-      onClick={() => {
-        naviagte("/projects/" + id);
-      }}
+      onClick={openProject}
+      onKeyDown={handleKeyDown}
+      role="button"
+      tabIndex={0}
     >
       <div className="card">
-        <img className="project-image" src={image} alt={name}/>
-        <div className="content">
-          <h1 className="project-title-inhover">{name}</h1>
-          <p className="project-description">{description}</p>
+        <div className="project-image-wrap">
+          <img className="project-image" src={image} alt={name}/>
         </div>
-      </div>
-      <div className="project-caption">
-        <h1 className="project-name"> {name} </h1>
-        <p className="project-tags">{tags}</p>
+        <div className="project-card-body">
+          <h2 className="project-name">{name}</h2>
+          <p className="project-description">{description}</p>
+          <div className="project-card-tech">
+            {tech.slice(0, 3).map((item) => (
+              <span key={item}>{item}</span>
+            ))}
+          </div>
+          <div className="case-study-link">
+            <span>View project</span>
+            <ArrowForwardIcon />
+          </div>
+        </div>
       </div>
     </div>
   );

@@ -14,8 +14,8 @@ const Projects = () => {
           id={idx} 
           name={project.name} 
           image={project.image}
-          tags={project.tags}
           description={project.description}
+          tech={project.tech}
            />;
         })}
       </div>

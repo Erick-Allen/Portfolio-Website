@@ -15,8 +15,9 @@
     color: rgb(0, 0, 0);
   }
 
-  .links :hover {
-    color: rgb(0, 89, 255);
+  .links button:hover,
+  .links button.active {
+    color: #ffb347;
     text-decoration: underline;
   }
   
@@ -26,6 +27,8 @@
     color: orange;
     margin: 20px;
     font-size: 25px;
+    cursor: pointer;
+    transition: color 0.2s ease;
   }
   
   .toggleButton {
@@ -74,6 +77,16 @@
     }
     #close .links {
       display: none;
+    }
+
+    #open .links {
+      gap: 18px;
+      margin-top: 80px;
+    }
+
+    .navbar button {
+      font-size: 22px;
+      margin: 14px;
     }
   }
   

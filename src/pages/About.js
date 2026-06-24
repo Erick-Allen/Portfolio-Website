@@ -2,30 +2,42 @@ import "../styles/About.css";
 
 const About = () => {
     return(
-        <div id="about">
+        <div className="about-content">
             <h1 className="title">About Me</h1>
             <div className="about-card">
                 <div className="about-left">
-                   <h2 className="sub-title">Skills</h2>
-                    <div className="skills-chips">
-                        <span className="chip">Python</span>
-                        <span className="chip">JavaScript</span>
-                        <span className="chip">Java</span>
-                        <span className="chip">Swift</span>
-                        <span className="chip">SQLite</span>
-                        <span className="chip">Docker</span>
-                        <span className="chip">React</span>
+                    <h2 className="sub-title">What I Focus On</h2>
+                    <div className="focus-list">
+                        <div className="focus-item">
+                            <strong>Applied AI Features</strong>
+                            <span>Assistant-style querying, classification, retrieval, and automation.</span>
+                        </div>
+                        <div className="focus-item">
+                            <strong>Workflow Automation</strong>
+                            <span>Software that helps users manage real work more efficiently.</span>
+                        </div>
+                        <div className="focus-item">
+                            <strong>AI-Ready Systems</strong>
+                            <span>APIs, databases, and interfaces built to support AI workflows.</span>
+                        </div>
                     </div>
                 </div>
 
                 <div className="about-right">
-                    <h2 className="sub-title">What Drives My Work</h2>
-                    <p className="about-description">
-                        I primarily build projects for everyday use, focusing on tools that are easy to access and scale as they grow. 
-                        I enjoy working on problems where small design decisions make a big difference in usability. 
-                        Python remains my language of choice thanks to its rich libraries and flexibility, especially when working with data.    
-                        I'm most interested in building software that adds depth to a project while remaining intuitive for a user at any level.
+                    <h2 className="sub-title">What I Build</h2>
+                    <div className="about-copy">
+                        <p className="about-description">
+                            I build practical, user-focused software with clean interfaces, reliable backend logic,
+                            and AI-assisted features that solve real workflow problems. My projects focus on usability,
+                            maintainability, and turning rough ideas into tools that are easy to use and expand.
                         </p>
+                        <p className="about-description">
+                            Through projects like InvoiceDB, I have worked with React, Python, APIs, SQLite,
+                            Docker, and AI-assisted features such as classification and assistant-style querying.
+                            I care about building software that is not just functional, but also clear, organized,
+                            and useful in real situations.
+                        </p>
+                    </div>
                 </div>
                 
             </div>

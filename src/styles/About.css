@@ -1,4 +1,4 @@
-#about {
+.about-content {
     background-color: rgb(221, 219, 219);
     padding: 10px 0px;
     text-align: center;
@@ -36,9 +36,16 @@
 
 .about-description {
     font-family: "Inter", system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
-    font-size: 18px;
+    font-size: 17px;
     line-height: 1.6;
-    margin: 0px 10px;
+    margin: 0;
+    color: #262626;
+}
+
+.about-copy {
+  display: grid;
+  gap: 14px;
+  margin: 0 10px;
 }
 
 .about-left {
@@ -54,23 +61,71 @@
   padding: 24px;
 }
 
-.skills-chips{
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap:10px;
-  margin-top:16px;
-}
-
-.chip{
+.focus-list {
   display: grid;
-  padding:8px 12px;
-  border-radius: 100px;
-  background: rgba(255,255,255,0.7);
-  border: 1px solid rgba(0,0,0,0.08);
-  font-weight:600;
-  font-size:16px;
-  width: 70%;
-  text-align: center;
-
+  gap: 12px;
+  margin-top: 18px;
 }
+
+.focus-item {
+  border-left: 3px solid #1f1f1f;
+  padding: 2px 0 2px 14px;
+}
+
+.focus-item strong,
+.focus-item span {
+  display: block;
+}
+
+.focus-item strong {
+  color: #111;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.focus-item span {
+  color: #3b3b3b;
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+@media only screen and (max-width: 760px) {
+  .about-content {
+    padding: 10px 14px;
+  }
+
+  .title {
+    font-size: 32px;
+  }
+
+  .about-card {
+    grid-template-columns: 1fr;
+    max-width: 560px;
+  }
+
+  .about-left {
+    border-right: 0;
+    border-bottom: 1px solid rgba(0,0,0,0.08);
+  }
+
+  .about-right,
+  .about-left {
+    padding: 20px;
+  }
+}
+
+@media only screen and (max-width: 430px) {
+  .about-right,
+  .about-left {
+    padding: 16px;
+  }
+
+  .about-copy {
+    margin: 0;
+  }
+
+  .about-description {
+    font-size: 16px;
+  }
+}
+
